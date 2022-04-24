@@ -56,7 +56,7 @@ namespace WindowsFormsApp2
                         first_.Last().setactivfunc(activ_first);
                     }
                 }
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 10; i++)
                 {
                     TextBox a = new TextBox();
                     a.Width = 150;
@@ -151,11 +151,7 @@ namespace WindowsFormsApp2
         {
             for (int i = 0; i < first.Count; i++)
             {
-                first[i].setactivfunc(activ_first);
-                first[i].setsumfunc();
                 first_[i].inputs[0] = first[i].getactivfunc();
-                first_[i].setactivfunc(activ_first);
-                first_[i].setsumfunc();
             }
         }
 
