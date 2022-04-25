@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -15,7 +16,9 @@ namespace WindowsFormsApp2
     {
         const double Alpha = 0.2;
         const double Eps = 0.2;
-        const String fol = "C:\\Users\\eng48\\OneDrive\\Рабочий стол\\selections\\";
+        String fol = "..\\..\\selections\\";
+
+
 
         List<First_neiron<Color>> first = new List<First_neiron<Color>>();
         List<First_neiron<double>> first_ = new List<First_neiron<double>>();
@@ -313,6 +316,12 @@ namespace WindowsFormsApp2
         public Double df(Double a)
         {
             return a * (1 - a);
+        }
+
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            thread.Abort();
         }
     }
 }
